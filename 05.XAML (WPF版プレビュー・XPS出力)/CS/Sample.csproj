@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <ItemGroup>
+<!-- Reports.net 本体 -->
+<!-- インストールフォルダにDLLがなければNuGetパッケージから参照 -->
+<PackageReference Include="Reports.net" Version="5.0.0.*" Condition="!Exists('$(ProgramFiles) (x86)\Pao@Office\Reports.net\Pao.Reports.dll')" />
+<PackageReference Include="Reports.net" Version="10.0.0.4" Condition="!Exists('$(ProgramFiles) (x86)\Pao@Office\Reports.net\Pao.Reports.dll')" />
+    <Reference Include="Pao.Reports" Condition="Exists('$(ProgramFiles) (x86)\Pao@Office\Reports.net\Pao.Reports.dll')">
+  <HintPath Condition="Exists('$(ProgramFiles) (x86)')">$(ProgramFiles) (x86)\Pao@Office\Reports.net\Pao.Reports.dll</HintPath>
+</Reference>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- ライセンスチェック用 開発環境のみに必要　運用環境への配布時には不要-->
+    <PackageReference Include="System.Management" Version="5.0.0" />
+  </ItemGroup>
+</Project>

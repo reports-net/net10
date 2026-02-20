@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+このファイルは、Web プロジェクトの公開 / パッケージ処理で使用されます。この MSBuild ファイルを編集すると、
+この処理の動作をカスタマイズできます。詳細については、https://go.microsoft.com/fwlink/?LinkID=208121 を参照してください。 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIorQOIRO3E+B13vxXuv2lQAAAAACAAAAAAAQZgAAAAEAACAAAAD2L/5K6xveRjl9G6fOB0CjqdV9hN33+//9XU+5P+EoHQAAAAAOgAAAAAIAACAAAAAoVaomr0n56K1lzRbd4S53KES5eSRkJbly0pOMepSK44AAAAD0l+AavPq3H4IfDcnaKvZrQIC0LzERwUSBVbMl3ymbTMtB5Zx8nE84OPMRet8zs4O02dkQkkg0IXLKyqD6UP2q2KVJlKuWK3oFnIojex35dFc9lth3ChPZi3If5KtrNsU7CJ+aa3aUQH4nGjI0LB3CQvyvZ9H3AzNyJ9tfmgpe3EAAAAA/hrFeFkRGNWu5uN1FYH+lxXECcgroRbUNRLJ4B9+wxwrLLD18zJ/DepNeSu/OHzOh4IMfhtVjNVCakelQgKPc</EncryptedPassword>
+    <History>False|2022-04-04T15:02:42.8470307Z;True|2022-04-05T00:00:44.8186166+09:00;True|2022-04-02T18:18:11.7722380+09:00;False|2022-04-02T18:15:42.0873615+09:00;False|2022-04-02T18:13:58.3352415+09:00;False|2022-04-02T18:13:29.1360811+09:00;True|2022-03-29T22:11:14.7100585+09:00;True|2022-03-29T22:10:02.8627427+09:00;True|2022-03-29T19:59:21.4990406+09:00;</History>
+  </PropertyGroup>
+</Project>
