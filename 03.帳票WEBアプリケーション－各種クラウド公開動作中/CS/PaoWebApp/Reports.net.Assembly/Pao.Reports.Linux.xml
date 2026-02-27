@@ -4,27 +4,6 @@
         <name>Pao.Reports.Linux</name>
     </assembly>
     <members>
-        <member name="T:Pao.Reports.About">
-            <summary>
-            Reports.netのバージョン情報ダイアログ
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.About.components">
-            <summary>
-            必要なデザイナ変数です。
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.About.Dispose(System.Boolean)">
-            <summary>
-            使用されているリソースに後処理を実行します。
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.About.InitializeComponent">
-            <summary>
-            デザイナ サポートに必要なメソッドです。このメソッドの内容を
-            コード エディタで変更しないでください。
-            </summary>
-        </member>
         <member name="T:Pao.Reports.Code128Pdf.CodeSet128Pdf">
             <summary>
             CODE128のコードセット(AUTO, A, B, C)
@@ -941,28 +920,6 @@
             <param name="offset">index of first byte to use</param>
             <param name="count">number of bytes to use</param>
         </member>
-        <member name="T:Pao.Reports.ClosedButton">
-            <summary>
-            閉じるボタンクラス
-            Textプロパティ、Imageプロパティは無視する。
-            サイズを24x24以外に設定した場合、Xの表示がおかしくなる。
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.ClosedButton.onMouse_">
-            <summary>
-            マウスがコントロール内に入っている場合にtrue
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.ClosedButton.onClick_">
-            <summary>
-            マウスのボタン押下をコントロール内で行った場合にtrue
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ClosedButton.#ctor">
-            <summary>
-            コンストラクタ
-            </summary>
-        </member>
         <member name="T:Pao.Reports.Core.ScanEventArgs">
             <summary>
             Event arguments for scanning.
@@ -1527,411 +1484,6 @@
             <returns>The path with the root removed if it was present; path otherwise.</returns>
             <remarks>Unlike the <see cref="T:System.IO.Path"/> class the path isnt otherwise checked for validity.</remarks>
         </member>
-        <member name="T:Pao.Reports.DocumentGroup">
-            <summary>
-            印刷データに関するグループ情報を保持するクラス
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentGroup.name_">
-            <summary>
-            グループ名
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentGroup.docList_">
-            <summary>
-            ドキュメントリスト
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.DocumentGroup.#ctor(System.String)">
-            <summary>
-            指定された名前のDocumentGroupオブジェクトを構築する
-            </summary>
-            <param name="name">グループ名</param>
-        </member>
-        <member name="P:Pao.Reports.DocumentGroup.Name">
-            <summary>
-            グループ名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.DocumentGroup.Count">
-            <summary>
-            印刷データ情報の数を取得する
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.DocumentGroup.Item(System.Int32)">
-            <summary>
-            印刷データ情報を取得するためのインデクサ
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.DocumentGroup.Add(Pao.Reports.DocumentInfo)">
-            <summary>
-            指定された印刷データ情報を追加する
-            </summary>
-            <param name="doc">追加する印刷データ情報</param>
-        </member>
-        <member name="M:Pao.Reports.DocumentGroup.Remove(Pao.Reports.DocumentInfo)">
-            <summary>
-            指定された印刷データ情報を削除する
-            </summary>
-            <param name="doc">削除する印刷データ情報</param>
-        </member>
-        <member name="T:Pao.Reports.DocumentInfo">
-            <summary>
-            印刷データに関する情報を保持するクラス
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentInfo.name_">
-            <summary>
-            印刷データ名
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentInfo.fileName_">
-            <summary>
-            印刷データのファイル名
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.DocumentInfo.#ctor(System.String,System.String)">
-            <summary>
-            指定されたデータ名とファイルを持つDocumentオブジェクトを構築する
-            </summary>
-            <param name="name">印刷データ名</param>
-            <param name="fileName">ファイル名</param>
-        </member>
-        <member name="P:Pao.Reports.DocumentInfo.Name">
-            <summary>
-            印刷データ名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.DocumentInfo.FileName">
-            <summary>
-            印刷データのファイル名
-            </summary>
-        </member>
-        <member name="T:Pao.Reports.DocumentManager">
-            <summary>
-            印刷データ情報を管理する
-            </summary>
-            <remarks>Singletonパターン</remarks>
-        </member>
-        <member name="F:Pao.Reports.DocumentManager.me_">
-            <summary>
-            自分自身のオブジェクト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentManager.NODE_ROOT">
-            <summary>
-            ルート要素
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentManager.NODE_GROUP">
-            <summary>
-            グループ要素
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentManager.NODE_DOC">
-            <summary>
-            ドキュメント要素
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentManager.NODE_DIR">
-            <summary>
-            ディレクトリ要素
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentManager.ATTR_NAME">
-            <summary>
-            名前属性
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentManager.ATTR_FILE">
-            <summary>
-            ファイル属性
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentManager.ATTR_DATE">
-            <summary>
-            日付属性
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentManager.ATTR_TIME">
-            <summary>
-            時間属性
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentManager.groupList_">
-            <summary>
-            印刷データグループ
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentManager.docList_">
-            <summary>
-            印刷データ情報
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentManager.docDir_">
-            <summary>
-            印刷データの出力先ディレクトリ
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentManager.setupFile_">
-            <summary>
-            設定情報ファイル名
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager.#ctor">
-            <summary>
-            新しいDocumentManagerオブジェクトを構築する
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager.GetInstance">
-            <summary>
-            DocumentManagerのオブジェクトを取得する
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:Pao.Reports.DocumentManager.GroupCount">
-            <summary>
-            保持している印刷データグループ数を取得する
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.DocumentManager.DocCount">
-            <summary>
-            保持しているグループ指定のない印刷データ情報数を取得する
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.DocumentManager.DocDir">
-            <summary>
-            印刷データの出力先ディレクトリ
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager.Add(Pao.Reports.DocumentGroup)">
-            <summary>
-            指定された印刷データグループを追加する
-            </summary>
-            <param name="group">追加する印刷データグループ</param>
-            
-        </member>
-        <member name="M:Pao.Reports.DocumentManager.Add(Pao.Reports.DocumentInfo)">
-            <summary>
-            指定された印刷データオブジェクトを追加する
-            </summary>
-            <param name="doc">追加するDocumentInfoオブジェクト</param>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager.Add(System.String,Pao.Reports.DocumentInfo)">
-            <summary>
-            指定された名前のグループに指定された印刷データオブジェクトを追加する
-            </summary>
-            <param name="group"></param>
-            <param name="doc"></param>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager.AddRange(Pao.Reports.DocumentGroup[])">
-            <summary>
-            指定された印刷データグループを追加する
-            </summary>
-            <param name="groups">追加する印刷データグループ</param>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager.AddRange(Pao.Reports.DocumentInfo[])">
-            <summary>
-            指定された印刷データオブジェクトを追加する
-            </summary>
-            <param name="docs">追加するDocumentInfoオブジェクト</param>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager.Remove(Pao.Reports.DocumentGroup)">
-            <summary>
-            指定された印刷データグループと同一オブジェクトを削除する
-            </summary>
-            <param name="group">削除するDocumentGroupオブジェクト</param>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager.Remove(Pao.Reports.DocumentInfo)">
-            <summary>
-            指定された印刷データオブジェクトと同一オブジェクトを削除する
-            </summary>
-            <param name="doc">削除するDocumentInfoオブジェクト</param>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager.RemoveAll">
-            <summary>
-            全ての印刷データ情報を削除する
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager.GetGroup(System.Int32)">
-            <summary>
-            指定された番号の印刷データグループを取得する
-            </summary>
-            <param name="index">インデックス</param>
-            <returns></returns>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager.GetDocument(System.Int32)">
-            <summary>
-            指定された番号の印刷データ情報を取得する
-            </summary>
-            <param name="index">インデックス</param>
-            <returns></returns>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager.Load">
-            <summary>
-            ファイルから情報を読込む
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager.Save">
-            <summary>
-            現在の情報をファイルに保存する
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager._SetCurrentSetting(System.Xml.XmlElement)">
-            <summary>
-            XML要素から設定値を取得する
-            </summary>
-            <param name="element">ルート要素</param>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager._CreateGroup(System.Xml.XmlElement)">
-            <summary>
-            指定された要素からDocumentGroupオブジェクトを作成する
-            </summary>
-            <param name="element"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager._CreateDocument(System.Xml.XmlElement)">
-            <summary>
-            指定された要素からDocumentInfoオブジェクトを作成する
-            </summary>
-            <param name="element"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager._GetCurrentSetting(System.Xml.XmlDocument,System.Xml.XmlElement)">
-            <summary>
-            現在の設定内容のXML要素を取得する
-            </summary>
-            <param name="doc">XML要素が所属するXMLドキュメント</param>
-            <param name="root">ルート要素</param>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager._CreateGroupElement(System.Xml.XmlDocument,Pao.Reports.DocumentGroup)">
-            <summary>
-            指定されたDocumentGroupオブジェクトのXML要素を作成する
-            </summary>
-            <param name="doc"></param>
-            <param name="group"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Pao.Reports.DocumentManager._CreateDocumentElement(System.Xml.XmlDocument,Pao.Reports.DocumentInfo)">
-            <summary>
-            指定されたDocumentInfoオブジェクトのXml要素を作成する
-            </summary>
-            <param name="doc"></param>
-            <param name="document"></param>
-            <returns></returns>
-        </member>
-        <member name="T:Pao.Reports.DocumentPanel">
-            <summary>
-            出力データ表示パネル
-            </summary>
-        </member>
-        <member name="T:Pao.Reports.DocumentPanel.SORT_TYPE">
-            <summary>
-            ドキュメントの並び順の列挙型
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentPanel.titlePanel_">
-            <summary>
-            タイトルとボタンを表示するパネル
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentPanel.closedButton_">
-            <summary>
-            閉じるボタン
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentPanel.imgList_">
-            <summary>
-            イメージリスト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentPanel.tree_">
-            <summary>
-            文書表示のTreeView
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentPanel.docManager_">
-            <summary>
-            DocumentManager
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.DocumentPanel.sortType_">
-            <summary>
-            ドキュメントのツリー構成
-            </summary>
-        </member>
-        <member name="T:Pao.Reports.DocumentPanel.SelectDocumentEventHandler">
-            <summary>
-            ドキュメントが選択されたときのデリゲート
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.DocumentPanel.#ctor">
-            <summary>
-            新しいDocumentPanelオブジェクトを構築する
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.DocumentPanel._InitComponent">
-            <summary>
-            各コンポーネントの初期設定
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.DocumentPanel._Initialize">
-            <summary>
-            初期処理を行う
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.DocumentPanel.DocumentPanel_Resize(System.Object,System.EventArgs)">
-            <summary>
-            リサイズイベント
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:Pao.Reports.DocumentPanel.TitlePanel_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
-            <summary>
-            ペイントイベント
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:Pao.Reports.DocumentPanel.clsedButton_Click(System.Object,System.EventArgs)">
-            <summary>
-            閉じるボタンクリックイベント
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:Pao.Reports.DocumentPanel.mnuGroup_Popup(System.Object,System.EventArgs)">
-            <summary>
-            種類順メニュー
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="P:Pao.Reports.DocumentPanel.Doc">
-            <summary>
-            DocumentManagerの取得・設定
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.DocumentPanel.Reload">
-            <summary>
-            現在のDocumentManagerからドキュメントツリーを作成する
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.DocumentPanel._CreateGroupNode(Pao.Reports.DocumentGroup)">
-            <summary>
-            指定されたDocumentGroupオブジェクトに対応するTreeNodeオブジェクトを構築する
-            </summary>
-            <param name="group">TreeNodeを作るDocumentGroupオブジェクト</param>
-            <returns></returns>
-        </member>
-        <member name="M:Pao.Reports.DocumentPanel._CreateDocumentNode(Pao.Reports.DocumentInfo)">
-            <summary>
-            指定されたDocumentInfoオブジェクトに対応するTreeNodeオブジェクトを構築する
-            </summary>
-            <param name="doc">TreeNodeを作るDocumentInfoオブジェクト</param>
-            <returns></returns>
-        </member>
         <member name="T:Pao.Reports.Encryption.PkzipClassic">
             <summary>
             PkzipClassic embodies the classic or original encryption facilities used in Pkzip archives.
@@ -2142,48 +1694,6 @@
             <param name="rgbKey">Keys to use for this new decryptor.</param>
             <param name="rgbIV">Initialisation vector for the new decryptor.</param>
             <returns>Returns a new decryptor.</returns>
-        </member>
-        <member name="T:Pao.Reports.FindForm">
-            <summary>
-            検索フォーム
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.FindForm.components">
-            <summary>
-            必要なデザイナ変数です。
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.FindForm.Dispose(System.Boolean)">
-            <summary>
-            使用されているリソースに後処理を実行します。
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.FindForm.InitializeComponent">
-            <summary>
-            デザイナ サポートに必要なメソッドです。このメソッドの内容を
-            コード エディタで変更しないでください。
-            </summary>
-        </member>
-        <member name="T:Pao.Reports.FindResult">
-            <summary>
-            FindResult の概要の説明です。
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.FindResult.components">
-            <summary>
-            必要なデザイナ変数です。
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.FindResult.Dispose(System.Boolean)">
-            <summary>
-            使用されているリソースに後処理を実行します。
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.FindResult.InitializeComponent">
-            <summary>
-            デザイナ サポートに必要なメソッドです。このメソッドの内容を
-            コード エディタで変更しないでください。
-            </summary>
         </member>
         <member name="T:Pao.Reports.GZip.GZipConstants">
             <summary>
@@ -2468,7 +1978,7 @@
             <param name="stream">出力ストリーム</param>
             <returns></returns>
         </member>
-        <member name="M:Pao.Reports.IOCreater.CreateDraw(System.Drawing.Graphics)">
+        <member name="M:Pao.Reports.IOCreater.CreateDraw(Pao.Reports.Linux.Graphics)">
             <summary>
             指定されたGraphicsオブジェクトでデータを描画するPmDrawオブジェクトを作成する
             </summary>
@@ -2769,11 +2279,6 @@
             オブジェクトの属性取得・設定用静的クラス
             </summary>
         </member>
-        <member name="P:Pao.Reports.IReport.z_PreviewWindow">
-            <summary>
-            プレビュー情報
-            </summary>
-        </member>
         <member name="M:Pao.Reports.IReport.LoadDefFile(System.String)">
             <summary>
             帳票定義体をファイルから読込む。
@@ -2927,7 +2432,7 @@
             <param name="name">保存するXPSファイル名</param>
             <return>True : 成功</return>
         </member>
-        <member name="M:Pao.Reports.IReport.WpfPreview(System.Windows.Controls.DocumentViewer)">
+        <member name="M:Pao.Reports.IReport.WpfPreview(System.Object)">
             <summary>
             指定されたDocumentViewerにの印刷データをプレビューする。
             </summary>
@@ -2937,6 +2442,11 @@
         <member name="M:Pao.Reports.IReport.ClearData">
             <summary>
             印刷データを初期化(破棄)する
+            </summary>
+        </member>
+        <member name="T:Pao.Reports.Linux.PaperSize">
+            <summary>
+            System.Drawing.Printing.PaperSize の代替スタブ（netstandard2.0用）
             </summary>
         </member>
         <member name="T:Pao.Reports.Linux.Color">
@@ -3829,35 +3339,6 @@
         <member name="T:Pao.Reports.Margin">
             <summary>
             Margin の概要の説明です。
-            </summary>
-        </member>
-        <member name="T:Pao.Reports.MenuItemHelp">
-            <summary>
-            メニューが選択されたときに、指定されたStatusBarPanelに文字列を表示するメニュークラス
-            </summary>
-            <remarks>
-            このクラスを使うと、StatusBarPanelに文字列が残る。
-            その場合、FormクラスのOnMenuCompleteイベントでStatusBarPanelのTextプロパティに空文字を代入すること。
-            </remarks>
-        </member>
-        <member name="F:Pao.Reports.MenuItemHelp.helpPanel_">
-            <summary>
-            ヘルプメッセージを表示するパネル
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.MenuItemHelp.helpString_">
-            <summary>
-            ヘルプメッセージ
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.MenuItemHelp.HelpPanel">
-            <summary>
-            ヘルプメッセージを表示するパネル
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.MenuItemHelp.HelpText">
-            <summary>
-            表示するヘルプメッセージ
             </summary>
         </member>
         <member name="T:Pao.Reports.PaoReportsBaseException">
@@ -11363,447 +10844,6 @@
             </summary>
             <param name="name">ノード名</param>
         </member>
-        <member name="T:Pao.Reports.PreviewSetting">
-            <summary>
-            印刷設定情報を読書きするクラス
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.me_">
-            <summary>
-            PreviewSettingオブジェクト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.DEFAULT_HISTORY_SIZE">
-            <summary>
-            デフォルトの履歴保存数
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.NODE_ROOT">
-            <summary>
-            ルート要素
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.NODE_WINDOW">
-            <summary>
-            メインウィンドウ要素
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.NODE_WINDOW_WPF">
-            <summary>
-            WPF メインウィンドウ要素
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.NODE_HISTORY_GROUP">
-            <summary>
-            履歴グループ要素
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.NODE_HISTORY">
-            <summary>
-            履歴要素
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.NODE_OUTPUT_GROUP">
-            <summary>
-            出力履歴グループ要素
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.ATTR_WINDOW_X">
-            <summary>
-            Window要素X座標
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.ATTR_WINDOW_Y">
-            <summary>
-            Window要素Y座標
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.ATTR_WINDOW_WIDTH">
-            <summary>
-            Window要素幅
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.ATTR_WINDOW_HEIGHT">
-            <summary>
-            Window要素高さ
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.ATTR_WINDOW_MAX">
-            <summary>
-            Window要素最大化表示
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.ATTR_WINDOW_TOOLBAR">
-            <summary>
-            Window要素ツールバーの表示
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.ATTR_WINDOW_TOOLBAR_SMALL_ICON">
-            <summary>
-            Window要素ツールバーアイコンの大・小
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.ATTR_WINDOW_TOOLBAR_TEXT">
-            <summary>
-            Window要素ツールバーのテキストの表示
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.ATTR_WINDOW_STATUSBAR">
-            <summary>
-            Window要素ステータスバーの表示
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.ATTR_WINDOW_AUTOSCALE">
-            <summary>
-            Window要素ステータスバーの表示自動スケーリング
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.ATTR_WINDOW_DOCWIDTH">
-            <summary>
-            Window要素のドキュメントフレームの幅
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.ATTR_WINDOW_DOCUMENT">
-            <summary>
-            Window要素のドキュメントフレームの表示
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.ATTR_HISTORY_FILENAME">
-            <summary>
-            履歴要素のファイル名
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.SAVE_PATH_PREPE">
-            <summary>
-            印刷データ保存先
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.SAVE_PATH_PDF">
-            <summary>
-            PDF保存先
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.DEVICE_NAME">
-            <summary>
-            DeviceName
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.windowRect_">
-            <summary>
-            前回のウィンドウ位置
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.maximum_">
-            <summary>
-            最大化表示の場合true
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.setupFile_">
-            <summary>
-            設定ファイルへのパス
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.toolBar_">
-            <summary>
-            ツールバーの表示・非表示
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.statusBar_">
-            <summary>
-            ステータスバーの表示・非表示
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.autoScale_">
-            <summary>
-            自動スケーリング
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.docWidth_">
-            <summary>
-            ドキュメントフレームの幅
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.docFrame_">
-            <summary>
-            ドキュメントフレームの表示・非表示
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.history_">
-            <summary>
-            プレビュー読み込み履歴
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.SaveXmlPath_">
-            <summary>
-            印刷データ保存先
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.SavePdfPath_">
-            <summary>
-            PDF保存先
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.deviceName_">
-            <summary>
-            Screen デバイス名
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.smallToolBarIcon_">
-            <summary>
-            のツールバーに表示するアイコンの大・小
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewSetting.dispToolBarText_">
-            <summary>
-            ツールバーのテキストの表示・非表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.PreviewSetting.WindowRect">
-            <summary>
-            メインウィンドウの位置・サイズ
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.PreviewSetting.Maximum">
-            <summary>
-            メインウィンドウの最大化表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.PreviewSetting.ToolBar">
-            <summary>
-            ツールバーの表示・非表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.PreviewSetting.SmallToolBarIcon">
-            <summary>
-            ツールバーのアイコン大・小
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.PreviewSetting.DispToolBarText">
-            <summary>
-            ツールバーのテキスト表示・非表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.PreviewSetting.StatusBar">
-            <summary>
-            ステータスバーの表示・非表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.PreviewSetting.AutoScae">
-            <summary>
-            自動スケーリング
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.PreviewSetting.DocWidth">
-            <summary>
-            ドキュメントフレームの幅
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.PreviewSetting.DocFrame">
-            <summary>
-            ドキュメントフレームの表示・非表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.PreviewSetting.SaveXmlPath">
-            <summary>
-            印刷データ保存先
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.PreviewSetting.SavePdfPath">
-            <summary>
-            ドキュメントフレームの表示・非表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.PreviewSetting.DeviceName">
-            <summary>
-            ウィンドウのデバイス名
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.PreviewSetting.#ctor">
-            <summary>
-            コンストラクタ
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.PreviewSetting.GetInstance">
-            <summary>
-            PreviewSettingオブジェクトを取得する
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.PreviewSetting.Save">
-            <summary>
-            現在の設定値を保存する
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.PreviewSetting._Load(System.String)">
-            <summary>
-            指定されたファイルから設定情報を読込む
-            </summary>
-            <param name="filename">設定ファイルへのパス</param>
-        </member>
-        <member name="M:Pao.Reports.PreviewSetting._SetCurrentSetting(System.Xml.XmlElement)">
-            <summary>
-            XML要素から設定値を取得する
-            </summary>
-            <param name="element">XML要素</param>
-        </member>
-        <member name="M:Pao.Reports.PreviewSetting._GetCurrentSetting(System.Xml.XmlDocument,System.Xml.XmlElement)">
-            <summary>
-            現在の設定内容のXML要素を取得する
-            </summary>
-            <param name="doc">XML要素が所属するXMLドキュメント</param>
-            <param name="root">ルート要素</param>
-        </member>
-        <member name="M:Pao.Reports.PreviewSetting._DefaultSetup">
-            <summary>
-            デフォルト設定を行う
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.PreviewSetting._GetDefaultWindowRect">
-            <summary>
-            デフォルトのウィンドウサイズを取得する
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Pao.Reports.PreviewSetting.AddHistory(System.String)">
-            <summary>
-            指定されたファイル名を履歴に追加する
-            </summary>
-            <param name="filename">ファイル名</param>
-        </member>
-        <member name="M:Pao.Reports.PreviewSetting.GetHistoryFileName(System.Int32)">
-            <summary>
-            指定された履歴番号のファイル名を取得する
-            </summary>
-            <param name="index">履歴番号（０以上）</param>
-            <returns></returns>
-            <remarks>数字が大きいほど新しい履歴</remarks>
-        </member>
-        <member name="M:Pao.Reports.PreviewSetting.GetHistoryCount">
-            <summary>
-            履歴数を取得する
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:Pao.Reports.PreviewZoom">
-            <summary>
-            表示倍率を管理するクラス
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewZoom.Zoom50">
-            <summary>
-            50%を表すPreviewZoomオブジェクト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewZoom.Zoom75">
-            <summary>
-            75%を表すPreviewZoomオブジェクト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewZoom.Zoom80">
-            <summary>
-            80%を表すPreviewZoomオブジェクト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewZoom.Zoom85">
-            <summary>
-            85%を表すPreviewZoomオブジェクト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewZoom.Zoom90">
-            <summary>
-            90%を表すPreviewZoomオブジェクト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewZoom.Zoom95">
-            <summary>
-            95%を表すPreviewZoomオブジェクト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewZoom.Zoom100">
-            <summary>
-            100%を表すPreviewZoomオブジェクト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewZoom.Zoom105">
-            <summary>
-            105%を表すPreviewZoomオブジェクト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewZoom.Zoom110">
-            <summary>
-            110%を表すPreviewZoomオブジェクト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewZoom.Zoom115">
-            <summary>
-            115%を表すPreviewZoomオブジェクト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewZoom.Zoom125">
-            <summary>
-            125%を表すPreviewZoomオブジェクト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewZoom.Zoom150">
-            <summary>
-            150%を表すPreviewZoomオブジェクト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewZoom.Zoom200">
-            <summary>
-            200%を表すPreviewZoomオブジェクト
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewZoom.name_">
-            <summary>
-            表示倍率の名称
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.PreviewZoom.zoom_">
-            <summary>
-            表示倍率
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.PreviewZoom.Name">
-            <summary>
-            表示倍率の名称
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.PreviewZoom.Zoom">
-            <summary>
-            表示倍率
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.PreviewZoom.#ctor(System.String,System.Single)">
-            <summary>
-            指定された値を持つPmDefTypeオブジェクトを構築する。
-            </summary>
-            <param name="name">表示倍率の名称</param>
-            <param name="zoom">表示倍率</param>
-        </member>
-        <member name="M:Pao.Reports.PreviewZoom.GetHashCode">
-            <summary>
-            ハッシュコードを取得する
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.PreviewZoom.ToString">
-            <summary>
-            オブジェクトの文字列表現を取得する
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.PreviewZoom.GetPreviewZoom(System.String)">
-            <summary>
-            指定された名称と同等なPreviewZoomオブジェクトを取得する
-            </summary>
-            <param name="name">名称</param>
-            <returns></returns>
-        </member>
-        <member name="M:Pao.Reports.PreviewZoom.GetPreviewZoom(System.Single)">
-            <summary>
-            指定された表示倍率と同等なPreviewZommオブジェクトを取得する
-            </summary>
-            <param name="zoom">表示倍率</param>
-            <returns></returns>
-        </member>
         <member name="T:Pao.Reports.PrintObjectCreater">
             <summary>
             印刷オブジェクトを作成するユーティリティクラス
@@ -12016,15 +11056,6 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Pao.Reports.Report.Save(System.String,System.String)">
-            <summary>
-            現在のデータの保存を行う
-            </summary>
-            <param name="group">グループ名</param>
-            <param name="name">印刷データ名</param>
-            <returns></returns>
-            <remarks>XML形式で出力する。また出力履歴に書き込みを行う</remarks>
-        </member>
         <member name="M:Pao.Reports.Report.SaveSVGFile(System.String)">
             <summary>
             指定されたファイルにSVG形式の印刷データを保存する。
@@ -12057,13 +11088,6 @@
             指定されたファイルにPDF形式の印刷データを保存する。
             </summary>
             <param name="name">印刷データを保存するファイル名</param>
-            <return></return>
-        </member>
-        <member name="M:Pao.Reports.Report.WpfPreview(System.Windows.Controls.DocumentViewer)">
-            <summary>
-            指定されたDocumentViewerにの印刷データをプレビューする。
-            </summary>
-            <param name="dw">印刷データを保存するファイル名</param>
             <return></return>
         </member>
         <member name="M:Pao.Reports.Report.SaveXPS(System.String)">
@@ -12140,19 +11164,6 @@
             </summary>
             <returns>印刷オブジェクト</returns>
         </member>
-        <member name="M:Pao.Reports.ReportCreator.GetPreview">
-            <summary>
-            プレビュー画面のオブジェクトを取得する
-            </summary>
-            <returns>プレビューオブジェクト</returns>
-        </member>
-        <member name="M:Pao.Reports.ReportCreator.GetPreview(System.String)">
-            <summary>
-            プレビュー画面のオブジェクトを取得する
-            </summary>
-            <param name="filename">レポート定義ファイル名 or 印刷データファイル名</param>
-            <returns>プレビューオブジェクト</returns>
-        </member>
         <member name="M:Pao.Reports.ReportCreator.GetPdf">
             <summary>
             PDFオブジェクトを取得する
@@ -12189,401 +11200,9 @@
             <param name="name">印刷データを保存するファイル名</param>
             <return></return>
         </member>
-        <member name="T:Pao.Reports.ReportPreview">
-            <summary>
-            Reportプレビュー画面
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.ReportPreview.DoExe">
-            <summary>
-            Exe起動されているか？
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.ReportPreview.report_">
-            <summary>
-            Report本体
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.ReportPreview.maxPage_">
-            <summary>
-            表示できるページ数
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.ReportPreview.openFilename_">
-            <summary>
-            現在開いているファイル名
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.ReportPreview.findString_">
-            <summary>
-            検索文字列
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.ReportPreview.searchResultAfter_">
-            <summary>
-            検索後、検索結果ダイアログをアクティブにしたかどうかを表すフラグ
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.#ctor">
-            <summary>
-            デフォルトコンストラクタ
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.#ctor(System.String)">
-            <summary>
-            指定されたファイルを読込み表示するReportPreviewオブジェクトを構築する
-            </summary>
-            <param name="filename">読込むファイルの名称</param>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.Dispose(System.Boolean)">
-            <summary>
-            使用されているリソースに後処理を実行します。
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.InitializeComponent">
-            <summary>
-            デザイナ サポートに必要なメソッドです。このメソッドの内容を
-            コード エディタで変更しないでください。
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._Initialize">
-            <summary>
-            初期処理
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.SelectedZoom(System.Object,System.EventArgs)">
-            <summary>
-            表示倍率の選択
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._MovePage(System.Int32)">
-            <summary>
-            現在表示しているページから指定された数移動する
-            </summary>
-            <param name="page">移動するページ数</param>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._ShowPage(System.Int32)">
-            <summary>
-            指定されたページを表示する
-            </summary>
-            <param name="page">表示するページ番号</param>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._AutoLoad(System.String)">
-            <summary>
-            定義体とデータを自動判別して読込む
-            </summary>
-            <param name="filename">読込むファイル名</param>
-            <returns></returns>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._OpenDefine">
-            <summary>
-            レポート定義ファイルを読込む
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._OpenPrintData">
-            <summary>
-            印刷データを読込む
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._Load(System.String,System.Boolean,System.Boolean)">
-            <summary>
-            指定されたファイルから印刷データ又は定義体を読込む
-            </summary>
-            <param name="filename">印刷データのファイル名</param>
-            <param name="define">定義体を読込む場合にtrueとする</param>
-            <param name="msg">メッセージを表示する場合にtrueとする</param>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._SaveAs">
-            <summary>
-            名前を付けて保存
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._SaveData(System.String)">
-            <summary>
-            指定されたファイルにデータを保存する
-            </summary>
-            <param name="filename">保存ファイル名</param>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._SavePDF(System.String)">
-            <summary>
-            指定されたファイルにデータを保存する
-            </summary>
-            <param name="filename">保存ファイル名</param>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.SavePDF(System.String)">
-            <summary>
-            指定されたファイルにPDF形式の印刷データを保存する。
-            </summary>
-            <param name="name">印刷データを保存するファイル名</param>
-            <return></return>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.SavePDF(System.IO.Stream)">
-            <summary>
-            指定されたストリームにPDF形式の印刷データを保存する。
-            </summary>
-            <param name="stream">印刷データを保存するストリーム名</param>
-            <return></return>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.SaveXPS(System.String)">
-            <summary>
-            指定されたファイルにXPS形式の印刷データを保存する。
-            </summary>
-            <param name="name">印刷データを保存するファイル名</param>
-            <return></return>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.WpfPreview(System.Windows.Controls.DocumentViewer)">
-            <summary>
-            指定されたDocumentViewerにの印刷データをプレビューする。
-            </summary>
-            <param name="dw">印刷データを保存するファイル名</param>
-            <return></return>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._Seach">
-            <summary>
-            検索
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._SeachRelease">
-            <summary>
-            検索文字列の強調表示を解除する
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._Print">
-            <summary>
-            印刷
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._Help">
-            <summary>
-            オンラインヘルプ
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._ShowErrorMsg(Pao.Reports.PmResource)">
-            <summary>
-            エラーメッセージを表示する
-            </summary>
-            <param name="res">PmResourceオブジェクト</param>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._ToolBarEnabled(System.Boolean)">
-            <summary>
-            ツールバーの有効・無効を設定する
-            </summary>
-            <param name="enabled"></param>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._ChangePageEnabled">
-            <summary>
-            ページ移動に関するメニューとツールバーの有効・無効を変更する
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._LoadDataSuccess">
-            <summary>
-            データの読み込みに成功した場合の処理
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._LoadDataFailed">
-            <summary>
-            データの読み込みに失敗した場合の処理
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.HistorySelected(System.Object,Pao.Reports.SelectDocumentEventArgs)">
-            <summary>
-            履歴パネルにて履歴が選択されたときのイベント
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._PreviewProcess">
-            <summary>
-            プレビュー表示処理
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ReportPreview.EmailOfLicenseHolder">
-            <summary>
-            ライセンス保持者メールアドレス
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ReportPreview.Pages">
-            <summary>
-            印刷ページ数
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.LoadDefFile(System.String)">
-            <summary>
-            レポート定義ファイルを読込む。
-            </summary>
-            <param name="name">レポート定義ファイルのファイル名</param>
-            <return></return>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.ChangeDefFile(System.String)">
-            <summary>
-            レポート定義ファイルを変更する。
-            (データの再セット不要)
-            </summary>
-            <param name="name">レポート定義ファイルのファイル名</param>
-            <return></return>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.LoadXMLFile(System.String)">
-            <summary>
-            印刷データ（XML形式）を読込む
-            </summary>
-            <param name="name">印刷データ（XML形式）のファイル名</param>
-            <return></return>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.LoadData(System.Byte[])">
-            <summary>
-            印刷データを読み込む
-            </summary>
-            <param name="data">印刷データ</param>
-            <returns></returns>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.PageStart">
-            <summary>
-            ページの開始を宣言する。
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.PageEnd">
-            <summary>
-            ページの終了を宣言する。
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.Write(System.String,System.String)">
-            <summary>
-            指定されたオブジェクト名に指定された値を設定する。
-            </summary>
-            <param name="name">設定するオブジェクト名</param>
-            <param name="value">設定する値</param>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.Write(System.String,System.String,System.Int64)">
-            <summary>
-            指定されたオブジェクト名に指定された値を設定する。
-            </summary>
-            <param name="name">設定するオブジェクト名</param>
-            <param name="value">設定する値</param>
-            <param name="index">設定するオブジェクトのインデックス（行番号等）</param>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.Write(System.String,System.Int64)">
-            <summary>
-            指定されたオブジェクト名に指定された値を設定する。
-            </summary>
-            <param name="name">設定するオブジェクト名</param>
-            <param name="index">設定するオブジェクトのインデックス（行番号等）</param>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.Write(System.String,System.String,System.Int64,System.Int64)">
-            <summary>
-            指定されたオブジェクト名に指定された値を設定する。
-            </summary>
-            <param name="name">設定するオブジェクト名</param>
-            <param name="value">設定する値</param>
-            <param name="indexX">設定するオブジェクトのインデックス（列番号）</param>
-            <param name="indexY">設定するオブジェクトのインデックス（行番号）</param>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.Write(System.String,System.Int64,System.Int64)">
-            <summary>
-            指定されたオブジェクト名に指定された値を設定する。
-            </summary>
-            <param name="name">設定するオブジェクト名</param>
-            <param name="indexX">設定するオブジェクトのインデックス（列番号）</param>
-            <param name="indexY">設定するオブジェクトのインデックス（行番号）</param>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.SaveXMLFile(System.String)">
-            <summary>
-            指定されたファイルにXML形式の印刷データを保存する。
-            </summary>
-            <param name="name">印刷データを保存するファイル名</param>
-            <return></return>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.SaveData">
-            <summary>
-            ZIP形式のバイナリデータを返す。
-            </summary>
-            <return></return>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.SaveSVGFile(System.String)">
-            <summary>
-            指定されたファイルにSVG形式の印刷データを保存する。
-            </summary>
-            <param name="name">印刷データを保存するファイル名</param>
-            <return></return>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.SaveSVGZFile(System.String)">
-            <summary>
-            指定されたファイルにSVGZ形式の印刷データを保存する。
-            </summary>
-            <param name="name">印刷データを保存するファイル名</param>
-            <return></return>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.IsDefine(System.String)">
-            <summary>
-            指定されたファイルがレポート定義ファイルかどうか調べる
-            </summary>
-            <param name="filename"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview.IsPrintData(System.String)">
-            <summary>
-            指定されたファイルが印刷データかどうか調べる
-            </summary>
-            <param name="filename"></param>
-            <returns></returns>
-        </member>
-        <member name="F:Pao.Reports.ReportPreview.displayDialog_">
-            <summary>
-            プレビュー表示する
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ReportPreview.CutByPage">
-            <summary>
-            ページでカットする(ラベルプリンタ・レシートプリンタ用)
-            既定値：false
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ReportPreview.DocumentName">
-            <summary>
-            印刷ドキュメント名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ReportPreview.AllPages">
-            <summary>
-            全ページ数
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ReportPreview.ZoomPreview">
-            <summary>
-            プレビュー表示倍率
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreview._GetPreviewName">
-            <summary>
-            帳票名を取得する
-            </summary>
-            <returns></returns>
-        </member>
         <member name="T:Pao.Reports.ReportsData">
             <summary>
             Reports.netの印刷データ
-            </summary>
-        </member>
-        <member name="T:Pao.Reports.SelectDocumentEventArgs">
-            <summary>
-            ドキュメントが選択されたときに発生するイベント
-            </summary>
-        </member>
-        <member name="F:Pao.Reports.SelectDocumentEventArgs.fileName_">
-            <summary>
-            ファイル名
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.SelectDocumentEventArgs.#ctor(System.String)">
-            <summary>
-            指定されたファイル名を持つSelectDocumentEventArgsオブジェクトを構築する
-            </summary>
-            <param name="filename">選択されたファイル名</param>
-        </member>
-        <member name="P:Pao.Reports.SelectDocumentEventArgs.FileName">
-            <summary>
-            ファイル名を取得する
             </summary>
         </member>
         <member name="T:Pao.Reports.PaoC">
@@ -12605,13 +11224,6 @@
         <member name="M:Pao.Reports.Util2.GetParentProcess(System.Diagnostics.Process)">
             <summary>
             現在のプロセスの親プロセスを取得する
-            </summary>
-            <param name="process">現在のプロセス</param>
-            <returns>親プロセス、または見つからない場合はnull</returns>
-        </member>
-        <member name="M:Pao.Reports.Util2.GetParentProcessWindows(System.Diagnostics.Process)">
-            <summary>
-            Windows 環境で親プロセスを取得する
             </summary>
             <param name="process">現在のプロセス</param>
             <returns>親プロセス、または見つからない場合はnull</returns>
@@ -12643,14 +11255,6 @@
             <summary>
             デバッグパスから実行されているかチェック
             </summary>
-        </member>
-        <member name="M:Pao.Reports.Util3.GetParentProcessIdSafe(System.Int32)">
-            <summary>
-            WMI を使って親プロセス ID を取得する（.NET Framework 2.0 対応版）
-            ※ 取得できない場合は 0 を返す
-            </summary>
-            <param name="processId">子プロセスの ID</param>
-            <returns>親プロセスの ID（失敗時は 0）</returns>
         </member>
         <member name="M:Pao.Reports.Util3.IsParentDevelopmentProcess">
             <summary>
@@ -18065,507 +16669,6 @@
             右下の角の状態
             </summary>
         </member>
-        <member name="T:Pao.Reports.IPreviewWindow">
-            <summary>
-            プレビュー画面インタフェース
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_TitleText">
-            <summary>
-            プレビュー画面タイトル
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_Icon">
-            <summary>
-            プレビュー画面アイコン
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_Top">
-            <summary>
-            プレビュー画面上位置(Y座標)
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_Left">
-            <summary>
-            プレビュー画面左位置(X座標)
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_Width">
-            <summary>
-            プレビュー画面幅
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_Height">
-            <summary>
-            プレビュー画面高さ
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_Maximum">
-            <summary>
-            プレビューウィンドウの最大化表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_SavePdfPath">
-            <summary>
-            PDF保存先
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_DeviceName">
-            <summary>
-            プレビューするスクリーンのデバイス名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_SaveXmlPath">
-            <summary>
-            印刷データ保存先
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_VisibleOpenButton">
-            <summary>
-            プレビュー画面 開くボタン表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_VisibleSaveButton">
-            <summary>
-            プレビュー画面 保存ボタン表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_VisiblePrintButton">
-            <summary>
-            プレビュー画面 印刷ボタン表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_VisibleMenu">
-            <summary>
-            プレビュー画面 メニュー表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_VersionWindow">
-            <summary>
-            バージョンウィンドウ
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_Zoom">
-            <summary>
-            プレビュー表示倍率
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_SmallToolbarIcon">
-            <summary>
-            プレビュー画面のツールバーに小さいアイコンを表示する場合、true を指定。
-            既定値： false (大きいアイコン)
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IPreviewWindow.z_DispToolbarText">
-            <summary>
-            プレビュー画面のツールバーに、テキストを表示する場合、true。
-            アイコンのみ出力して、テキストを表示しない場合、false。
-            既定値： true (テキストを表示)
-            </summary>
-        </member>
-        <member name="T:Pao.Reports.ZPreviewWindow">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_TitleText">
-            <summary>
-            プレビュー画面タイトル
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_Icon">
-            <summary>
-            プレビュー画面アイコン
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_Top">
-            <summary>
-            プレビュー画面上位置(Y座標)
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_Left">
-            <summary>
-            プレビュー画面左位置(X座標)
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_Width">
-            <summary>
-            プレビュー画面幅
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_Height">
-            <summary>
-            プレビュー画面高さ
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_Maximum">
-            <summary>
-            プレビューウィンドウの最大化
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_DeviceName">
-            <summary>
-            プレビューするスクリーンのデバイス名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_SavePdfPath">
-            <summary>
-            PDF保存先
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_SaveXmlPath">
-            <summary>
-            印刷データ保存先
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_VisibleOpenButton">
-            <summary>
-            プレビュー画面 開くボタン表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_VisibleSaveButton">
-            <summary>
-            プレビュー画面 保存ボタン表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_VisiblePrintButton">
-            <summary>
-            プレビュー画面 印刷ボタン表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_VisibleMenu">
-            <summary>
-            プレビュー画面 メニュー表示
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_Zoom">
-            <summary>
-            プレビュー表示倍率
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_SmallToolbarIcon">
-            <summary>
-            プレビュー画面のツールバーに小さいアイコンを表示する場合、true を指定。
-            既定値： false (大きいアイコン)
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZPreviewWindow.z_DispToolbarText">
-            <summary>
-            プレビュー画面のツールバーに、テキストを表示する場合、true。
-            アイコンのみ出力して、テキストを表示しない場合、false。
-            既定値： true (テキストを表示)
-            </summary>
-        </member>
-        <member name="T:Pao.Reports.IVersionWindow">
-            <summary>
-            プレビュー画面インタフェース
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.FormVersion">
-            <summary>
-            バージョンフォーム
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.ProductImage">
-            <summary>
-            製品画像
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.ProductName">
-            <summary>
-            製品名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.ProductVersion">
-            <summary>
-            製品バージョン
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.CopyRight">
-            <summary>
-            著作権
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.CompanyName">
-            <summary>
-            会社名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.Url">
-            <summary>
-            URL
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.ProductImage_Top">
-            <summary>
-            Top座標 - 製品画像
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.ProductName_Top">
-            <summary>
-            Top座標 - 製品名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.ProductVersion_Top">
-            <summary>
-            Top座標 - 製品バージョン
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.CopyRight_Top">
-            <summary>
-            Top座標 - 著作権
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.CompanyName_Top">
-            <summary>
-            Top座標 - 会社名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.Url_Top">
-            <summary>
-            Top座標 - URL
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.ProductImage_Left">
-            <summary>
-            Left座標 - 製品画像
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.ProductName_Left">
-            <summary>
-            Left座標 - 製品名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.ProductVersion_Left">
-            <summary>
-            Left座標 - 製品バージョン
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.CopyRight_Left">
-            <summary>
-            Left座標 - 著作権
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.CompanyName_Left">
-            <summary>
-            Left座標 - 会社名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.Url_Left">
-            <summary>
-            Left座標 - URL
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.ProductImage_Size">
-            <summary>
-            製品画像サイズ
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.ProductName_Font">
-            <summary>
-            製品名 フォント
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.ProductVersion_Font">
-            <summary>
-            製品バージョン フォント
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.CopyRight_Font">
-            <summary>
-            著作権 フォント
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.Url_Font">
-            <summary>
-            URL フォント
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.ProductName_ForeColor">
-            <summary>
-            製品名 文字色
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.ProductVersion_ForeColor">
-            <summary>
-            製品バージョン 文字色
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.CopyRight_ForeColor">
-            <summary>
-            著作権 文字色
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.IVersionWindow.Url_ForeColor">
-            <summary>
-            URL 文字色
-            </summary>
-        </member>
-        <member name="T:Pao.Reports.ZVersionWindow">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.FormVersion">
-            <summary>
-            バージョンフォーム
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.ProductImage">
-            <summary>
-            製品画像
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.ProductName">
-            <summary>
-            製品名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.ProductVersion">
-            <summary>
-            製品バージョン
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.CopyRight">
-            <summary>
-            著作権
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.CompanyName">
-            <summary>
-            会社名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.Url">
-            <summary>
-            URL
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.ProductImage_Top">
-            <summary>
-            Top座標 - 製品画像
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.ProductName_Top">
-            <summary>
-            Top座標 - 製品名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.ProductVersion_Top">
-            <summary>
-            Top座標 - 製品バージョン
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.CopyRight_Top">
-            <summary>
-            Top座標 - 著作権
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.CompanyName_Top">
-            <summary>
-            Top座標 - 会社名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.Url_Top">
-            <summary>
-            Top座標 - URL
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.ProductImage_Left">
-            <summary>
-            Left座標 - 製品画像
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.ProductName_Left">
-            <summary>
-            Left座標 - 製品名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.ProductVersion_Left">
-            <summary>
-            Left座標 - 製品バージョン
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.CopyRight_Left">
-            <summary>
-            Left座標 - 著作権
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.CompanyName_Left">
-            <summary>
-            Left座標 - 会社名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.Url_Left">
-            <summary>
-            Left座標 - URL
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.ProductImage_Size">
-            <summary>
-            Size - 製品画像
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.ProductName_Font">
-            <summary>
-            Font - 製品名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.ProductVersion_Font">
-            <summary>
-            Font - 製品バージョン
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.CopyRight_Font">
-            <summary>
-            Font - 著作権
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.CompanyName_Font">
-            <summary>
-            Font - 会社名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.Url_Font">
-            <summary>
-            Font - URL
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.ProductName_ForeColor">
-            <summary>
-            文字色 - 製品名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.ProductVersion_ForeColor">
-            <summary>
-            文字色 - 製品バージョン
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.CopyRight_ForeColor">
-            <summary>
-            文字色 - 著作権
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.CompanyName_ForeColor">
-            <summary>
-            文字色 - 会社名
-            </summary>
-        </member>
-        <member name="P:Pao.Reports.ZVersionWindow.Url_ForeColor">
-            <summary>
-            文字色 - URL
-            </summary>
-        </member>
-        <member name="T:Pao.Reports.ReportPreviewWpf">
-            <summary>
-            ReportPreviewWpf
-            </summary>
-        </member>
-        <member name="M:Pao.Reports.ReportPreviewWpf.InitializeComponent">
-            <summary>
-            InitializeComponent
-            </summary>
-        </member>
         <member name="F:Pao.Util.clsDBType.Sys">
             <summary>
             System Database
@@ -19965,139 +18068,6 @@
             of "columns" or symbol segments in each row of data.
             @param columns Number of segments in each row
         </member>
-        <member name="T:Pao.BarCode.IBarCode">
-            <summary>
-            GDI+グラフィックスを使用したバーコード生成用インターフェース。
-            
-            コンストラクタについて:
-            各バーコードクラスはSVG出力専用の引数なしコンストラクタを提供しています。
-            引数なしコンストラクタを使用した場合、デフォルトでImageFormat.Pngが設定されます。
-            SVGのみを出力する場合は、引数なしコンストラクタの使用を推奨します。
-            </summary>
-        </member>
-        <member name="P:Pao.BarCode.IBarCode.TextWrite">
-            <summary>
-            バーコードと共にテキストを生成するかどうかを示す値を取得または設定します。
-            </summary>
-        </member>
-        <member name="P:Pao.BarCode.IBarCode.TextKintou">
-            <summary>
-            描画位置モードを取得または設定します（バーコードを指定幅に合わせるため）。
-            true: 全体幅内で均等配置でバーコードを描画します。
-            false: コードを意味するバーの位置にバーコードを描画します（デフォルト）。
-            </summary>
-        </member>
-        <member name="P:Pao.BarCode.IBarCode.TextFont">
-            <summary>
-            テキスト描画に使用するフォントを取得または設定します。
-            </summary>
-        </member>
-        <member name="P:Pao.BarCode.IBarCode.RotateAngle">
-            <summary>
-            バーコードの回転角度（度単位）を取得または設定します。
-            </summary>
-        </member>
-        <member name="P:Pao.BarCode.IBarCode.KuroBarChousei">
-            <summary>
-            黒バーの微調整用ドット数を取得または設定します。デフォルト値は0です。
-            </summary>
-        </member>
-        <member name="P:Pao.BarCode.IBarCode.ShiroBarChousei">
-            <summary>
-            白バーの微調整用ドット数を取得または設定します。デフォルト値は0です。
-            </summary>
-        </member>
-        <member name="P:Pao.BarCode.IBarCode.ImgDrawUnit">
-            <summary>
-            画像描画単位を取得または設定します（画像ファイルへの描画時に使用）。
-            </summary>
-        </member>
-        <member name="M:Pao.BarCode.IBarCode.Draw(System.String,System.Single,System.Single,System.Single,System.Single)">
-            <summary>
-            バーコードを描画します。
-            </summary>
-            <param name="code">バーコードのコードを文字列で指定します。</param>
-            <param name="x">描画位置の始点（左上）のX座標を指定します。</param>
-            <param name="y">描画位置の始点（左上）のY座標を指定します。</param>
-            <param name="width">バーコードの全体幅を指定します。</param>
-            <param name="height">バーコードの高さを指定します。</param>
-        </member>
-        <member name="M:Pao.BarCode.IBarCode.Draw(System.String,System.Single,System.Single,System.Single,System.Single,System.String)">
-            <summary>
-            コンストラクタでImageFormatを指定した場合、バーコードを画像ファイルに描画します。
-            </summary>
-            <param name="code">バーコードのコードを文字列で指定します。</param>
-            <param name="x">描画位置の始点（左上）のX座標を指定します。</param>
-            <param name="y">描画位置の始点（左上）のY座標を指定します。</param>
-            <param name="width">バーコードの全体幅を指定します。</param>
-            <param name="height">バーコードの高さを指定します。</param>
-            <param name="imageFilePath">画像ファイルのパスを指定します。</param>
-        </member>
-        <member name="M:Pao.BarCode.IBarCode.DrawDelicate(System.String,System.Single,System.Single,System.Single,System.Single)">
-            <summary>
-            最小線幅を指定してバーコードを描画します。
-            </summary>
-            <param name="code">バーコードのコードを文字列で指定します。</param>
-            <param name="x">描画位置の始点（左上）のX座標を指定します。</param>
-            <param name="y">描画位置の始点（左上）のY座標を指定します。</param>
-            <param name="minLineWidth">描画するバーコードの最細バー幅を指定します。</param>
-            <param name="height">バーコードの高さを指定します。</param>
-        </member>
-        <member name="M:Pao.BarCode.IBarCode.DrawDelicate(System.String,System.Single,System.Single,System.Single,System.Single,System.String)">
-            <summary>
-            最小線幅を指定してバーコードを画像ファイルに描画します。
-            </summary>
-            <param name="code">バーコードのコードを文字列で指定します。</param>
-            <param name="x">描画位置の始点（左上）のX座標を指定します。</param>
-            <param name="y">描画位置の始点（左上）のY座標を指定します。</param>
-            <param name="minLineWidth">描画するバーコードの最細バー幅を指定します。</param>
-            <param name="height">バーコードの高さを指定します。</param>
-            <param name="imageFilePath">画像ファイルのパスを指定します。</param>
-        </member>
-        <member name="M:Pao.BarCode.IBarCode.DrawDirect(System.String,System.Single,System.Single,System.Single,System.Single)">
-            <summary>
-            指定幅（ピクセル）内でバーコードを直接描画します。
-            Drawメソッドより精度と速度が向上します。
-            </summary>
-            <param name="code">バーコードのコードを文字列で指定します。</param>
-            <param name="x">描画位置の始点（左上）のX座標を指定します。</param>
-            <param name="y">描画位置の始点（左上）のY座標を指定します。</param>
-            <param name="width">バーコードの全体幅を指定します。</param>
-            <param name="height">バーコードの高さを指定します。</param>
-        </member>
-        <member name="M:Pao.BarCode.IBarCode.DrawDirect(System.String,System.Single,System.Single,System.Single,System.Single,System.String)">
-            <summary>
-            指定幅（ピクセル）内でバーコードを画像ファイルに直接描画します。
-            </summary>
-            <param name="code">バーコードのコードを文字列で指定します。</param>
-            <param name="x">描画位置の始点（左上）のX座標を指定します。</param>
-            <param name="y">描画位置の始点（左上）のY座標を指定します。</param>
-            <param name="width">バーコードの全体幅を指定します。</param>
-            <param name="height">バーコードの高さを指定します。</param>
-            <param name="imageFilePath">画像ファイルのパスを指定します。</param>
-        </member>
-        <member name="M:Pao.BarCode.IBarCode.WriteSVG(System.String,System.Single,System.Single,System.Single,System.Single,System.String)">
-            <summary>
-            バーコードをSVGファイルに出力します。
-            </summary>
-            <param name="code">バーコードのコードを文字列で指定します。</param>
-            <param name="x">描画位置の始点（左上）のX座標をピクセルで指定します。</param>
-            <param name="y">描画位置の始点（左上）のY座標をピクセルで指定します。</param>
-            <param name="width">バーコードの全体幅をピクセルで指定します。</param>
-            <param name="height">バーコードの高さをピクセルで指定します。</param>
-            <param name="filePath">SVGファイルのファイル名をフルパスで指定します。</param>
-        </member>
-        <member name="M:Pao.BarCode.IBarCode.WriteSVGToString(System.String,System.Single,System.Single,System.Single,System.Single)">
-            <summary>
-            バーコードをSVG文字列として生成します。
-            </summary>
-            <param name="code">バーコードのコードを文字列で指定します。</param>
-            <param name="x">描画位置の始点（左上）のX座標をピクセルで指定します。</param>
-            <param name="y">描画位置の始点（左上）のY座標をピクセルで指定します。</param>
-            <param name="width">バーコードの全体幅をピクセルで指定します。</param>
-            <param name="height">バーコードの高さをピクセルで指定します。</param>
-            <returns>SVG形式の文字列。</returns>
-        </member>
         <member name="T:Pao.BarCode.PmSvgAttr">
             <summary>
             Reportで使用するXML属性名を宣言する
@@ -20543,6 +18513,139 @@
             <summary>
             Overload for general object input
             </summary>
+        </member>
+        <member name="T:Pao.BarCode.IBarCode">
+            <summary>
+            GDI+グラフィックスを使用したバーコード生成用インターフェース。
+            
+            コンストラクタについて:
+            各バーコードクラスはSVG出力専用の引数なしコンストラクタを提供しています。
+            引数なしコンストラクタを使用した場合、デフォルトでImageFormat.Pngが設定されます。
+            SVGのみを出力する場合は、引数なしコンストラクタの使用を推奨します。
+            </summary>
+        </member>
+        <member name="P:Pao.BarCode.IBarCode.TextWrite">
+            <summary>
+            バーコードと共にテキストを生成するかどうかを示す値を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Pao.BarCode.IBarCode.TextKintou">
+            <summary>
+            描画位置モードを取得または設定します（バーコードを指定幅に合わせるため）。
+            true: 全体幅内で均等配置でバーコードを描画します。
+            false: コードを意味するバーの位置にバーコードを描画します（デフォルト）。
+            </summary>
+        </member>
+        <member name="P:Pao.BarCode.IBarCode.TextFont">
+            <summary>
+            テキスト描画に使用するフォントを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Pao.BarCode.IBarCode.RotateAngle">
+            <summary>
+            バーコードの回転角度（度単位）を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Pao.BarCode.IBarCode.KuroBarChousei">
+            <summary>
+            黒バーの微調整用ドット数を取得または設定します。デフォルト値は0です。
+            </summary>
+        </member>
+        <member name="P:Pao.BarCode.IBarCode.ShiroBarChousei">
+            <summary>
+            白バーの微調整用ドット数を取得または設定します。デフォルト値は0です。
+            </summary>
+        </member>
+        <member name="P:Pao.BarCode.IBarCode.ImgDrawUnit">
+            <summary>
+            画像描画単位を取得または設定します（画像ファイルへの描画時に使用）。
+            </summary>
+        </member>
+        <member name="M:Pao.BarCode.IBarCode.Draw(System.String,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            バーコードを描画します。
+            </summary>
+            <param name="code">バーコードのコードを文字列で指定します。</param>
+            <param name="x">描画位置の始点（左上）のX座標を指定します。</param>
+            <param name="y">描画位置の始点（左上）のY座標を指定します。</param>
+            <param name="width">バーコードの全体幅を指定します。</param>
+            <param name="height">バーコードの高さを指定します。</param>
+        </member>
+        <member name="M:Pao.BarCode.IBarCode.Draw(System.String,System.Single,System.Single,System.Single,System.Single,System.String)">
+            <summary>
+            コンストラクタでImageFormatを指定した場合、バーコードを画像ファイルに描画します。
+            </summary>
+            <param name="code">バーコードのコードを文字列で指定します。</param>
+            <param name="x">描画位置の始点（左上）のX座標を指定します。</param>
+            <param name="y">描画位置の始点（左上）のY座標を指定します。</param>
+            <param name="width">バーコードの全体幅を指定します。</param>
+            <param name="height">バーコードの高さを指定します。</param>
+            <param name="imageFilePath">画像ファイルのパスを指定します。</param>
+        </member>
+        <member name="M:Pao.BarCode.IBarCode.DrawDelicate(System.String,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            最小線幅を指定してバーコードを描画します。
+            </summary>
+            <param name="code">バーコードのコードを文字列で指定します。</param>
+            <param name="x">描画位置の始点（左上）のX座標を指定します。</param>
+            <param name="y">描画位置の始点（左上）のY座標を指定します。</param>
+            <param name="minLineWidth">描画するバーコードの最細バー幅を指定します。</param>
+            <param name="height">バーコードの高さを指定します。</param>
+        </member>
+        <member name="M:Pao.BarCode.IBarCode.DrawDelicate(System.String,System.Single,System.Single,System.Single,System.Single,System.String)">
+            <summary>
+            最小線幅を指定してバーコードを画像ファイルに描画します。
+            </summary>
+            <param name="code">バーコードのコードを文字列で指定します。</param>
+            <param name="x">描画位置の始点（左上）のX座標を指定します。</param>
+            <param name="y">描画位置の始点（左上）のY座標を指定します。</param>
+            <param name="minLineWidth">描画するバーコードの最細バー幅を指定します。</param>
+            <param name="height">バーコードの高さを指定します。</param>
+            <param name="imageFilePath">画像ファイルのパスを指定します。</param>
+        </member>
+        <member name="M:Pao.BarCode.IBarCode.DrawDirect(System.String,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            指定幅（ピクセル）内でバーコードを直接描画します。
+            Drawメソッドより精度と速度が向上します。
+            </summary>
+            <param name="code">バーコードのコードを文字列で指定します。</param>
+            <param name="x">描画位置の始点（左上）のX座標を指定します。</param>
+            <param name="y">描画位置の始点（左上）のY座標を指定します。</param>
+            <param name="width">バーコードの全体幅を指定します。</param>
+            <param name="height">バーコードの高さを指定します。</param>
+        </member>
+        <member name="M:Pao.BarCode.IBarCode.DrawDirect(System.String,System.Single,System.Single,System.Single,System.Single,System.String)">
+            <summary>
+            指定幅（ピクセル）内でバーコードを画像ファイルに直接描画します。
+            </summary>
+            <param name="code">バーコードのコードを文字列で指定します。</param>
+            <param name="x">描画位置の始点（左上）のX座標を指定します。</param>
+            <param name="y">描画位置の始点（左上）のY座標を指定します。</param>
+            <param name="width">バーコードの全体幅を指定します。</param>
+            <param name="height">バーコードの高さを指定します。</param>
+            <param name="imageFilePath">画像ファイルのパスを指定します。</param>
+        </member>
+        <member name="M:Pao.BarCode.IBarCode.WriteSVG(System.String,System.Single,System.Single,System.Single,System.Single,System.String)">
+            <summary>
+            バーコードをSVGファイルに出力します。
+            </summary>
+            <param name="code">バーコードのコードを文字列で指定します。</param>
+            <param name="x">描画位置の始点（左上）のX座標をピクセルで指定します。</param>
+            <param name="y">描画位置の始点（左上）のY座標をピクセルで指定します。</param>
+            <param name="width">バーコードの全体幅をピクセルで指定します。</param>
+            <param name="height">バーコードの高さをピクセルで指定します。</param>
+            <param name="filePath">SVGファイルのファイル名をフルパスで指定します。</param>
+        </member>
+        <member name="M:Pao.BarCode.IBarCode.WriteSVGToString(System.String,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            バーコードをSVG文字列として生成します。
+            </summary>
+            <param name="code">バーコードのコードを文字列で指定します。</param>
+            <param name="x">描画位置の始点（左上）のX座標をピクセルで指定します。</param>
+            <param name="y">描画位置の始点（左上）のY座標をピクセルで指定します。</param>
+            <param name="width">バーコードの全体幅をピクセルで指定します。</param>
+            <param name="height">バーコードの高さをピクセルで指定します。</param>
+            <returns>SVG形式の文字列。</returns>
         </member>
         <member name="T:ExtStrings">
             -----------------------------------------------------------------------------
